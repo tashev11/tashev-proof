@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Tashev Proof — AI said done. Proof checks if it is.</title>
+  <meta name="description" content="Proof-of-done for AI-assisted development. Turn tasks into acceptance contracts, run real evidence, and gate releases with PROVEN / PARTIAL / FAILED verdicts.">
+  <meta name="theme-color" content="#050505">
+  <meta property="og:title" content="Tashev Proof">
+  <meta property="og:description" content="AI said done. Proof checks if it is.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tashev11.github.io/tashev-proof/">
+  <meta property="og:image" content="https://tashev11.github.io/tashev-proof/assets/social-preview.svg">
+  <link rel="canonical" href="https://tashev11.github.io/tashev-proof/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/icons/proven.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="noise"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Tashev Proof home">
+      <span class="brand-mark">✓</span>
+      <span>
+        <strong>TASHEV PROOF</strong>
+        <small>proof-of-done</small>
+      </span>
+    </a>
+    <nav class="nav">
+      <a href="#why" data-en="Why Proof" data-ru="Зачем">Why Proof</a>
+      <a href="#how" data-en="How it works" data-ru="Как работает">How it works</a>
+      <a href="#evidence" data-en="Evidence" data-ru="Доказательства">Evidence</a>
+      <a href="#install" data-en="Install" data-ru="Установка">Install</a>
+      <button class="lang" id="langToggle" type="button" aria-label="Switch language">RU</button>
+      <a class="nav-cta" href="https://github.com/tashev11/tashev-proof" target="_blank" rel="noreferrer">GitHub ↗</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="hero-copy reveal">
+        <span class="eyebrow"><span class="pulse-dot"></span><span data-en="Open-source · Local-first · Zero runtime dependencies" data-ru="Open-source · Local-first · 0 runtime-зависимостей">Open-source · Local-first · Zero runtime dependencies</span></span>
+        <h1>
+          <span data-en="AI said “done”." data-ru="AI сказал «готово».">AI said “done”.</span>
+          <em data-en="Proof checks if it is." data-ru="Proof проверяет, так ли это.">Proof checks if it is.</em>
+        </h1>
+        <p class="hero-lead" data-en="Turn a human task into an acceptance contract, execute real evidence, and get an honest ship decision before production." data-ru="Превратите человеческую задачу в acceptance contract, запустите реальные проверки и получите честное решение о релизе до продакшна.">
+          Turn a human task into an acceptance contract, execute real evidence, and get an honest ship decision before production.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#install"><span data-en="Install Proof" data-ru="Установить Proof">Install Proof</span> <span>↓</span></a>
+          <a class="button secondary" href="https://github.com/tashev11/tashev-proof" target="_blank" rel="noreferrer">★ GitHub</a>
+        </div>
+        <div class="hero-meta">
+          <span><b>MIT</b> License</span>
+          <span><b>Node 18+</b></span>
+          <span><b>10/10</b> tests</span>
+          <span><b>0</b> vulnerabilities</span>
+        </div>
+      </div>
+
+      <div class="hero-demo reveal delay">
+        <div class="terminal proof-terminal" aria-label="Animated Proof terminal">
+          <div class="terminal-bar">
+            <span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span>
+            <span class="terminal-title">proof ship</span>
+          </div>
+          <div class="terminal-body">
+            <p class="prompt">$ <span>proof ship</span></p>
+            <p class="muted">TASHEV PROOF</p>
+            <p class="task"><span data-en="Task:" data-ru="Задача:">Task:</span> <strong>Password reset</strong></p>
+
+            <div class="demo-stage active" data-stage="0">
+              <p class="checking"><span class="spinner"></span> reading acceptance contract…</p>
+            </div>
+            <div class="demo-stage" data-stage="1">
+              <p class="ok">✓ auth regression tests</p>
+              <p class="ok">✓ reset endpoint returns 200</p>
+              <p class="bad">✗ token can be reused</p>
+              <p class="warn">? mobile UX unverified</p>
+              <div class="result fail">DO NOT SHIP</div>
+            </div>
+            <div class="demo-stage" data-stage="2">
+              <p class="fixline">AI fixes token reuse…</p>
+              <p class="fixline">Human attests mobile UX…</p>
+              <p class="checking"><span class="spinner"></span> rerunning evidence…</p>
+            </div>
+            <div class="demo-stage" data-stage="3">
+              <p class="ok">✓ auth regression tests</p>
+              <p class="ok">✓ reset endpoint returns 200</p>
+              <p class="ok">✓ token reuse rejected</p>
+              <p class="ok">✓ mobile UX attested</p>
+              <div class="result pass">PROVEN ✓ · READY TO SHIP</div>
+            </div>
+
+            <div class="progress-track"><span id="demoProgress"></span></div>
+          </div>
+        </div>
+        <div class="demo-labels">
+          <span>1. AI says done</span>
+          <span>2. Proof finds gap</span>
+          <span>3. Fix + attest</span>
+          <span>4. PROVEN</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="logos-strip">
+      <span data-en="Works with the tools you already use:" data-ru="Работает с тем, что у вас уже есть:">Works with the tools you already use:</span>
+      <b>Claude Code</b><b>Codex</b><b>Cursor</b><b>Gemini</b><b>Playwright</b><b>Jest</b><b>pytest</b><b>Cypress</b>
+    </section>
+
+    <section class="section" id="why">
+      <div class="section-head reveal">
+        <span class="kicker" data-en="THE GAP" data-ru="ПРОБЛЕМА">THE GAP</span>
+        <h2 data-en="Writing code got faster. Proving “done” did not." data-ru="Код стал писаться быстрее. Проверка «готово» — нет.">Writing code got faster. Proving “done” did not.</h2>
+        <p data-en="The weak point in vibe coding is no longer only implementation. It is knowing what was actually verified." data-ru="Слабое место вайбкодинга уже не только реализация. Главный вопрос — что реально проверено.">The weak point in vibe coding is no longer only implementation. It is knowing what was actually verified.</p>
+      </div>
+
+      <div class="compare-grid reveal">
+        <article class="panel danger-panel">
+          <div class="panel-icon danger-icon">×</div>
+          <span class="panel-label" data-en="WITHOUT PROOF" data-ru="БЕЗ PROOF">WITHOUT PROOF</span>
+          <h3 data-en="Confidence is conversational" data-ru="Уверенность держится на словах">Confidence is conversational</h3>
+          <ul>
+            <li data-en="AI says “done”" data-ru="AI говорит «готово»">AI says “done”</li>
+            <li data-en="Edge cases may be missing" data-ru="Edge cases могут быть забыты">Edge cases may be missing</li>
+            <li data-en="Mobile / API can remain unchecked" data-ru="Mobile / API могут остаться непроверенными">Mobile / API can remain unchecked</li>
+            <li data-en="You ask the same agent to review itself" data-ru="Вы просите тот же AI проверить самого себя">You ask the same agent to review itself</li>
+          </ul>
+          <div class="pill danger-pill" data-en="CONFIDENCE: ASSUMED" data-ru="УВЕРЕННОСТЬ: ПРЕДПОЛОЖЕНИЕ">CONFIDENCE: ASSUMED</div>
+        </article>
+
+        <article class="panel success-panel">
+          <div class="panel-icon success-icon">✓</div>
+          <span class="panel-label" data-en="WITH TASHEV PROOF" data-ru="С TASHEV PROOF">WITH TASHEV PROOF</span>
+          <h3 data-en="Confidence is evidence" data-ru="Уверенность опирается на evidence">Confidence is evidence</h3>
+          <ul>
+            <li data-en="“Done” is an explicit contract" data-ru="«Готово» описано явным contract">“Done” is an explicit contract</li>
+            <li data-en="Checks execute independently" data-ru="Проверки выполняются независимо">Checks execute independently</li>
+            <li data-en="Unknown stays unverified" data-ru="Неизвестное остаётся unverified">Unknown stays unverified</li>
+            <li data-en="Ship decision is repeatable" data-ru="Решение о релизе повторяемо">Ship decision is repeatable</li>
+          </ul>
+          <div class="pill success-pill" data-en="CONFIDENCE: EVIDENCE" data-ru="УВЕРЕННОСТЬ: ДОКАЗАТЕЛЬСТВА">CONFIDENCE: EVIDENCE</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section flow-section" id="how">
+      <div class="section-head reveal">
+        <span class="kicker" data-en="HOW IT WORKS" data-ru="КАК РАБОТАЕТ">HOW IT WORKS</span>
+        <h2 data-en="A verification layer between coding and shipping." data-ru="Слой проверки между кодингом и релизом.">A verification layer between coding and shipping.</h2>
+      </div>
+
+      <div class="steps reveal">
+        <article class="step">
+          <span class="step-num">01</span>
+          <div class="step-icon">◎</div>
+          <h3 data-en="Human task" data-ru="Задача человека">Human task</h3>
+          <p data-en="Start from what the user actually asked for." data-ru="Начинаем с того, что реально попросил пользователь.">Start from what the user actually asked for.</p>
+        </article>
+        <div class="arrow">→</div>
+        <article class="step">
+          <span class="step-num">02</span>
+          <div class="step-icon">{ }</div>
+          <h3>Acceptance contract</h3>
+          <p data-en="Define what must be true before the task counts as done." data-ru="Определяем, что должно быть истинно, чтобы задача считалась готовой.">Define what must be true before the task counts as done.</p>
+        </article>
+        <div class="arrow">→</div>
+        <article class="step">
+          <span class="step-num">03</span>
+          <div class="step-icon">⌁</div>
+          <h3>Evidence</h3>
+          <p data-en="Run tests, files, HTTP checks and explicit human review." data-ru="Запускаем тесты, файлы, HTTP и явную человеческую приёмку.">Run tests, files, HTTP checks and explicit human review.</p>
+        </article>
+        <div class="arrow">→</div>
+        <article class="step accent-step">
+          <span class="step-num">04</span>
+          <div class="step-icon">✓</div>
+          <h3 data-en="Verdict" data-ru="Вердикт">Verdict</h3>
+          <p>PROVEN · PARTIAL · FAILED</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section verdict-section">
+      <div class="section-head reveal">
+        <span class="kicker" data-en="HONEST OUTCOMES" data-ru="ЧЕСТНЫЕ РЕЗУЛЬТАТЫ">HONEST OUTCOMES</span>
+        <h2 data-en="Unknown is not success." data-ru="Неизвестное — не успех.">Unknown is not success.</h2>
+      </div>
+
+      <div class="verdict-grid reveal">
+        <article class="verdict-card proven">
+          <img src="assets/icons/proven.svg" alt="">
+          <h3>PROVEN</h3>
+          <p data-en="Every required criterion has evidence." data-ru="Каждый обязательный критерий подтверждён evidence.">Every required criterion has evidence.</p>
+          <strong data-en="READY TO SHIP" data-ru="МОЖНО ВЫПУСКАТЬ">READY TO SHIP</strong>
+        </article>
+        <article class="verdict-card partial">
+          <img src="assets/icons/partial.svg" alt="">
+          <h3>PARTIAL</h3>
+          <p data-en="Nothing failed, but required evidence is missing." data-ru="Ошибок нет, но обязательных доказательств не хватает.">Nothing failed, but required evidence is missing.</p>
+          <strong data-en="VERIFY MORE" data-ru="НУЖНА ПРОВЕРКА">VERIFY MORE</strong>
+        </article>
+        <article class="verdict-card failed">
+          <img src="assets/icons/failed.svg" alt="">
+          <h3>FAILED</h3>
+          <p data-en="At least one required criterion failed." data-ru="Минимум один обязательный критерий провалился.">At least one required criterion failed.</p>
+          <strong data-en="DO NOT SHIP" data-ru="НЕ ВЫПУСКАТЬ">DO NOT SHIP</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="section evidence-section" id="evidence">
+      <div class="section-head reveal">
+        <span class="kicker" data-en="EVIDENCE, NOT VIBES" data-ru="EVIDENCE, А НЕ ОЩУЩЕНИЯ">EVIDENCE, NOT VIBES</span>
+        <h2 data-en="Use the tools your project already trusts." data-ru="Используйте инструменты, которым проект уже доверяет.">Use the tools your project already trusts.</h2>
+        <p data-en="Proof orchestrates evidence. It does not replace your test stack." data-ru="Proof оркестрирует evidence, а не заменяет ваш test stack.">Proof orchestrates evidence. It does not replace your test stack.</p>
+      </div>
+
+      <div class="evidence-grid reveal">
+        <article class="evidence-card">
+          <img src="assets/icons/command.svg" alt="">
+          <div><h3>Command</h3><p>tests · lint · build · Playwright · Cypress</p></div>
+        </article>
+        <article class="evidence-card">
+          <img src="assets/icons/file.svg" alt="">
+          <div><h3>File</h3><p>exists · contains · regex · generated artifacts</p></div>
+        </article>
+        <article class="evidence-card">
+          <img src="assets/icons/http.svg" alt="">
+          <div><h3>HTTP</h3><p>status · body · health · API · webhooks</p></div>
+        </article>
+        <article class="evidence-card">
+          <img src="assets/icons/human.svg" alt="">
+          <div><h3>Human</h3><p>UX · visual · business · device · legal</p></div>
+        </article>
+      </div>
+
+      <div class="code-card reveal">
+        <div class="code-tabs">
+          <span class="active">contract.json</span>
+          <span>task → evidence</span>
+        </div>
+        <pre><code>{
+  "task": "Add password reset",
+  "criteria": [
+    {
+      "id": "auth-tests",
+      "type": "command",
+      "command": "npm test -- auth",
+      "required": true
+    },
+    {
+      "id": "health",
+      "type": "http",
+      "url": "http://localhost:3000/health",
+      "status": 200,
+      "required": true
+    },
+    {
+      "id": "mobile-ux",
+      "type": "manual",
+      "required": true
+    }
+  ]
+}</code></pre>
+      </div>
+    </section>
+
+    <section class="section diff-section">
+      <div class="section-head reveal">
+        <span class="kicker" data-en="NOT ANOTHER TEST FRAMEWORK" data-ru="НЕ ЕЩЁ ОДИН ТЕСТОВЫЙ ФРЕЙМВОРК">NOT ANOTHER TEST FRAMEWORK</span>
+        <h2 data-en="Tests prove assertions. Proof proves the task." data-ru="Тесты доказывают assertions. Proof доказывает задачу.">Tests prove assertions. Proof proves the task.</h2>
+      </div>
+
+      <div class="diff-grid reveal">
+        <article class="diff-card">
+          <span class="mini-label">Jest · pytest · Playwright</span>
+          <h3 data-en="Did this test pass?" data-ru="Этот тест прошёл?">Did this test pass?</h3>
+          <p data-en="Excellent at executing technical assertions." data-ru="Отлично выполняет конкретные технические assertions.">Excellent at executing technical assertions.</p>
+        </article>
+        <div class="plus">+</div>
+        <article class="diff-card accent-diff">
+          <span class="mini-label">Tashev Proof</span>
+          <h3 data-en="Is the human task proven complete?" data-ru="Доказано ли, что человеческая задача полностью выполнена?">Is the human task proven complete?</h3>
+          <p data-en="Maps tests, HTTP, files and human review back to acceptance criteria." data-ru="Связывает tests, HTTP, files и human review с acceptance criteria.">Maps tests, HTTP, files and human review back to acceptance criteria.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section install-section" id="install">
+      <div class="install-box reveal">
+        <div>
+          <span class="kicker" data-en="GET STARTED" data-ru="НАЧАТЬ">GET STARTED</span>
+          <h2 data-en="Install. Define “done”. Prove it." data-ru="Установите. Опишите «готово». Докажите.">Install. Define “done”. Prove it.</h2>
+          <p data-en="Current release: v0.1.0 · MIT · zero runtime dependencies." data-ru="Текущий релиз: v0.1.0 · MIT · 0 runtime-зависимостей.">Current release: v0.1.0 · MIT · zero runtime dependencies.</p>
+        </div>
+        <div class="install-terminal">
+          <button class="copy-button" data-copy="npm install -g https://github.com/tashev11/tashev-proof/releases/download/v0.1.0/tashev-proof-0.1.0.tgz">Copy</button>
+          <code>npm install -g https://github.com/tashev11/tashev-proof/releases/download/v0.1.0/tashev-proof-0.1.0.tgz</code>
+        </div>
+        <div class="install-steps">
+          <code>proof init --task "Add password reset"</code>
+          <span>→</span>
+          <code>proof run</code>
+          <span>→</span>
+          <code>proof ship</code>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dogfood-section">
+      <div class="dogfood-grid reveal">
+        <div>
+          <span class="kicker" data-en="DOGFOODED" data-ru="ПРОВЕРЕНО НА СЕБЕ">DOGFOODED</span>
+          <h2 data-en="Proof had to prove Proof before shipping." data-ru="Proof должен был доказать готовность самого Proof перед релизом.">Proof had to prove Proof before shipping.</h2>
+          <p data-en="The v0.1.0 release includes its own generated Proof report." data-ru="В релиз v0.1.0 приложен собственный сгенерированный Proof report.">The v0.1.0 release includes its own generated Proof report.</p>
+          <a class="text-link" href="https://github.com/tashev11/tashev-proof/releases/tag/v0.1.0" target="_blank" rel="noreferrer">View release evidence ↗</a>
+        </div>
+        <div class="score-card">
+          <div class="score-ring"><strong>12</strong><span>PROVEN</span></div>
+          <div class="score-lines">
+            <span><b>0</b> failed</span>
+            <span><b>0</b> unverified</span>
+            <span><b>✓</b> ready to ship</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section ecosystem-section">
+      <div class="section-head reveal">
+        <span class="kicker">TASHEV OPEN SOURCE</span>
+        <h2 data-en="Three focused tools. Three different pains." data-ru="Три сфокусированных инструмента. Три разные боли.">Three focused tools. Three different pains.</h2>
+      </div>
+      <div class="ecosystem-grid reveal">
+        <article>
+          <span class="eco-badge blue">OS</span>
+          <h3>TashevOS</h3>
+          <p data-en="Orchestrate and remember AI development." data-ru="Управляет и помнит AI-разработку.">Orchestrate and remember AI development.</p>
+        </article>
+        <article>
+          <span class="eco-badge cyan">↔</span>
+          <h3>Tashev Relay</h3>
+          <p data-en="Continue across agents, terminals and machines." data-ru="Продолжает работу между AI, терминалами и компьютерами.">Continue across agents, terminals and machines.</p>
+          <a href="https://github.com/tashev11/tashev-relay" target="_blank" rel="noreferrer">GitHub ↗</a>
+        </article>
+        <article class="eco-active">
+          <span class="eco-badge green">✓</span>
+          <h3>Tashev Proof</h3>
+          <p data-en="Independently verify “done” before shipping." data-ru="Независимо проверяет «готово» перед релизом.">Independently verify “done” before shipping.</p>
+          <a href="https://github.com/tashev11/tashev-proof" target="_blank" rel="noreferrer">GitHub ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section final-cta">
+      <div class="cta-glow"></div>
+      <div class="reveal">
+        <span class="kicker" data-en="STOP TRUSTING “DONE”" data-ru="НЕ ВЕРЬТЕ СЛОВУ «ГОТОВО»">STOP TRUSTING “DONE”</span>
+        <h2 data-en="Make your next AI-built feature prove itself." data-ru="Пусть следующая AI-функция докажет собственную готовность.">Make your next AI-built feature prove itself.</h2>
+        <p data-en="Open-source, local-first and designed to work with the stack you already have." data-ru="Open-source, local-first и работает поверх того стека, который у вас уже есть.">Open-source, local-first and designed to work with the stack you already have.</p>
+        <div class="hero-actions center">
+          <a class="button primary" href="https://github.com/tashev11/tashev-proof" target="_blank" rel="noreferrer">★ Star on GitHub</a>
+          <a class="button secondary" href="#install"><span data-en="Install v0.1.0" data-ru="Установить v0.1.0">Install v0.1.0</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand">
+      <span class="brand-mark small">✓</span>
+      <span><strong>TASHEV PROOF</strong><small>Don't trust “done”. Prove it.</small></span>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/tashev11/tashev-proof" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="https://github.com/tashev11/tashev-proof/releases" target="_blank" rel="noreferrer">Releases</a>
+      <a href="https://github.com/tashev11/tashev-proof/issues" target="_blank" rel="noreferrer">Issues</a>
+      <a href="https://github.com/tashev11" target="_blank" rel="noreferrer">@tashev11</a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

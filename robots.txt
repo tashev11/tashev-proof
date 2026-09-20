@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tashev11.github.io/tashev-proof/sitemap.xml

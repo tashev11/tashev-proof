@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
+<defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#050505"/><stop offset="1" stop-color="#0b2a20"/></linearGradient></defs>
+<rect width="1280" height="640" fill="url(#bg)"/><circle cx="1130" cy="80" r="260" fill="#14532d" opacity=".25"/><circle cx="1210" cy="600" r="360" fill="#134e4a" opacity=".16"/>
+<rect x="78" y="72" width="72" height="72" rx="20" fill="#052e16" stroke="#166534"/><circle cx="114" cy="108" r="23" fill="none" stroke="#22c55e" stroke-width="5"/><path d="M102 108l8 8 18-21" fill="none" stroke="#86efac" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="176" y="104" fill="#86efac" font-size="28" font-family="ui-monospace,Menlo,monospace" font-weight="800">TASHEV PROOF</text><text x="176" y="136" fill="#a1a1aa" font-size="18" font-family="Arial,sans-serif">Proof-of-done for AI-assisted development</text>
+<text x="78" y="276" fill="#fff" font-size="70" font-family="Arial,sans-serif" font-weight="850">AI said “done”.</text><text x="78" y="360" fill="#4ade80" font-size="70" font-family="Arial,sans-serif" font-weight="850">Proof checks if it is.</text>
+<text x="80" y="425" fill="#d4d4d8" font-size="24" font-family="Arial,sans-serif">Acceptance contracts · Real evidence · Honest ship verdicts</text>
+<rect x="80" y="492" width="480" height="76" rx="18" fill="#030303" stroke="#27272a"/><text x="110" y="540" fill="#4ade80" font-size="28" font-family="ui-monospace,Menlo,monospace">$ proof ship</text><text x="330" y="540" fill="#71717a" font-size="28" font-family="ui-monospace,Menlo,monospace">→</text><text x="380" y="540" fill="#fff" font-size="28" font-family="ui-monospace,Menlo,monospace">PROVEN ✓</text>
+</svg>
